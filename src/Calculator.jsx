@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Button from './Button'
 function Calculator() {
-  const [num, UpdateNum] = useState("");
+  const [num, UpdateNum] = useState(0);
   const [num1, UpdateNum1] = useState(0);
-  const [num2, UpdateNum2] = useState("");
+  const [num2, UpdateNum2] = useState(0);
   const [operator, UpdateOperator] = useState("");
   const [solution, UpdateSolution] = useState("");
 
