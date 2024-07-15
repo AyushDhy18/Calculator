@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Button from './Button'
 function Calculator() {
-  const [num, UpdateNum] = useState(0);
+  const [num, UpdateNum] = useState("");
   const [num1, UpdateNum1] = useState(0);
-  const [num2, UpdateNum2] = useState(0);
+  const [num2, UpdateNum2] = useState("");
   const [operator, UpdateOperator] = useState("");
   const [solution, UpdateSolution] = useState("");
 
@@ -24,7 +24,7 @@ function Calculator() {
 
   const sum = parseFloat(num1) + parseFloat(num2);
 
-  const equalto = (event) => { operator == "-" ? UpdateSolution(num1 - num2) : operator == "x" ? UpdateSolution(num1 * num2) : operator == "/" ? UpdateSolution(num1 / num2) : operator == "+" ? UpdateSolution(sum) : operator == "%" ? UpdateSolution((num1 / 100) * num2) : UpdateSolution(0), UpdateNum1(event.target.value), UpdateNum2(""), UpdateOperator("") }
+  const equalto = (event) => { operator == "-" ? UpdateSolution(num1 - num2) : operator == "x" ? UpdateSolution(num1 * num2) : operator == "/" ? UpdateSolution(num1 / num2) : operator == "+" ? UpdateSolution(sum) : operator == "%" ? UpdateSolution((num1 / 100) * num2) : UpdateSolution(0), UpdateNum1(solution), UpdateNum2(""), UpdateOperator("") }
   // Prevent num1 and num2 from concatinating 
   return (
     <div className="flex items-center justify-center">
